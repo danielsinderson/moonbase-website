@@ -1,0 +1,24 @@
+/* Register your custom font family and tell the browser where to find it. */
+@font-face {
+    font-family: 'Vagrund';
+    src: url('/fonts/VAGRundschriftBQ.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+html {
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Vagrund', sans-serif;
+}
+
+h2 {
+    font-family: 'Vagrund', sans-serif;
+}
+
+a {
+    font-family: 'Vagrund', sans-serif;
+}
