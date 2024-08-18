@@ -7,12 +7,11 @@
     font-display: swap;
 }
 
-html {
-    text-align: center;
-}
+html {}
 
 h1 {
     font-family: 'Vagrund', sans-serif;
+    text-align: center;
 }
 
 h2 {
@@ -21,4 +20,28 @@ h2 {
 
 a {
     font-family: 'Vagrund', sans-serif;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    color: gray;
+}
+
+.nav-links {
+    text-align: center;
+}
+
+.footer-info {
+    text-align: center;
 }
