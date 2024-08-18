@@ -3,8 +3,14 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Moon Base Books">
-    <a href="/browse"><h2>Browse</h2></a>
-    <a href="/submit"><h2>Submit</h2></a>
-    <a href="/contact"><h2>Contact</h2></a>
-    <a href="/resources"><h2>Resources</h2></a>
+    <div class="title-page-links">
+        <a class="title-page-links" href="/browse"><h2>Browse</h2></a>
+        <a class="title-page-links" href="/submit"><h2>Submit</h2></a>
+        <a class="title-page-links" href="/contact"><h2>Contact</h2></a>
+        <a class="title-page-links" href="/resources"><h2>Resources</h2></a>
+    </div>
 </Layout>
+<style>
+    .title-page-links {
+    }
+</style>
