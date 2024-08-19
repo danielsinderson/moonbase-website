@@ -22,7 +22,7 @@ const { title } = Astro.props;
 	<body>
 		<Header />
 		<h1>{title}</h1>
-		<hr style="width: 400px;" />
+		<hr />
 		<div class="page-content">
 			<slot />
 		</div>
@@ -32,9 +32,26 @@ const { title } = Astro.props;
 
 <style>
 	.page-content {
-		width: 100%;
+		width: 50%;
 		display: flex;
 		justify-content: center;
+		align-items: center;
 		flex-direction: column;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	hr {
+		width: 50%;
+	}
+
+	@media (max-width: 479px) {
+		.page-content {
+			width: 90%;
+		}
+
+		hr {
+			width: 100%;
+		}
 	}
 </style>
