@@ -2,16 +2,16 @@
 @font-face {
     font-family: 'Vagrund';
     src: url('/fonts/VAGRundschriftBQ.otf') format('opentype');
-    font-weight: normal;
+    font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
 
-html {}
 
 h1 {
     font-family: 'Vagrund', sans-serif;
     text-align: center;
+    font-weight: normal;
 }
 
 h2 {
@@ -38,6 +38,14 @@ a:active {
     color: gray;
 }
 
+em {
+    font-weight: bold;
+    font-style: normal;
+}
+
+p {
+    line-height: 20pt;
+}
 
 .nav-links {
     text-align: center;

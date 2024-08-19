@@ -1,6 +1,34 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Product from "../components/Product.astro";
 const title = "Browse";
 ---
 
-<Layout title="Browse" />
+<Layout title="Browse">
+    <div class="product-grid">
+        <Product
+            storeURL="https://www.lulu.com/shop/liam-marshall/breathing-optional/hardcover/product-rnyr5z.html?q=Breathing+Optional&page=1&pageSize=4"
+            coverImage="/BO_frontcover.png"
+            coverAlt="Cover for Breathing Optional, cardiogram signal on a black background"
+            title="Breathing Optional"
+            author="Liam Marshall"
+            price="$39"
+        />
+        <Product
+            storeURL="https://www.lulu.com/shop/liam-marshall/wax/hardcover/product-2mm6vq2.html?q=Wax+Liam+Marshall&page=1&pageSize=4"
+            coverImage="/Wax_Cover.png"
+            coverAlt="Cover for Wax, an abstract image of rectangles of different sizes and textures on a white background"
+            title="Wax"
+            author="Liam Marshall"
+            price="$39"
+        />
+        <Product
+            storeURL=""
+            coverImage="/Tensegrity-cover.png"
+            coverAlt="Cover for Tensegrity, an overhead projector projecting a multicolored holograph of a cube on a red-orange background"
+            title="Tensegrity"
+            author="Daniel Sinderson"
+            price="$10"
+        />
+    </div>
+</Layout>

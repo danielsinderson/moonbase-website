@@ -1,0 +1,39 @@
+---
+const { storeURL, coverImage, coverAlt, title, author, price } = Astro.props;
+---
+
+<div class="product-card">
+    <a href={storeURL}
+        ><img
+            class="cover-image"
+            src={coverImage}
+            alt={coverAlt}
+            width="150"
+            height="200"
+        /></a
+    >
+
+    <a href={storeURL}><p>{title}</p></a>
+    <p>{author}</p>
+    <p>{price}</p>
+</div>
+
+<style>
+    .product-card {
+        text-align: center;
+    }
+
+    .cover-image {
+        outline: 2px solid;
+    }
+
+    p {
+        margin-bottom: 3px;
+        margin-top: 3px;
+        font-size: small;
+    }
+
+    a {
+        font-family: serif;
+    }
+</style>
