@@ -9,7 +9,6 @@ interface Props {
 const title = Astro.props;
 ---
 
-<!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
@@ -39,6 +38,14 @@ const title = Astro.props;
                     ><h2>Resources</h2></a
                 >
             </div>
+            <script>
+                import "../scripts/generateSampleText.js";
+            </script>
+            <div class="sample-card" id="text-sample-card">
+                <p class="sample-text" id="sampleText"></p>
+                <p class="sample-text" id="sampleSource"></p>
+                <p class="sample-text" id="sampleAuthor"></p>
+            </div>
         </div>
         <Footer />
     </body>
@@ -57,6 +64,13 @@ const title = Astro.props;
 
     .title-page-links {
         font-size: large;
+    }
+
+    .sample-card {
+        outline: 2px solid;
+        width: 400px;
+        height: 400px;
+        padding: 10px;
     }
 
     hr {
