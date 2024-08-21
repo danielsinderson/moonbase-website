@@ -32,7 +32,7 @@ const { title } = Astro.props;
 
 <style>
 	.page-content {
-		width: 50%;
+		width: clamp(400px, 50%, 800px);
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -42,16 +42,6 @@ const { title } = Astro.props;
 	}
 
 	hr {
-		width: 50%;
-	}
-
-	@media (max-width: 479px) {
-		.page-content {
-			width: 90%;
-		}
-
-		hr {
-			width: 100%;
-		}
+		width: clamp(400px, 50%, 800px);
 	}
 </style>
