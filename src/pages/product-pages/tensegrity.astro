@@ -1,0 +1,195 @@
+---
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import "../../styles/global.css";
+interface Props {
+    title: string;
+}
+
+const coverImage = "/TensegrityCover-big.png";
+const coverAlt =
+    "Cover for Tensegrity, an overhead projector projecting a multicolored holograph of a cube on a red-orange background";
+
+const title = "Tensegrity";
+const author = "Daniel Sinderson";
+const price = "$10";
+const format = "softcover";
+
+const pubdate = "Jul 23, 2024";
+const dims = "6 x 9in";
+const pagecount = "81 Pages";
+const isbn = "978-1-961343-01-6";
+
+// You will need to fill in the blurbs by hand
+---
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Astro description" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Books - {title}</title>
+    </head>
+    <body>
+        <Header />
+
+        <div class="product-content">
+            <img
+                class="cover-image"
+                src={coverImage}
+                alt={coverAlt}
+                width="400"
+                height="532"
+            />
+
+            <div class="purchase-info">
+                <p>
+                    <b>{title}</b><br /><b>{author}</b><br />{format}<br />{
+                        price
+                    }
+                </p>
+            </div>
+
+            <div class="purchase-button">
+                <button class="button-6" role="button">Add to Cart</button>
+            </div>
+
+            <div class="book-info">
+                <p>{pubdate} | {dims} | {pagecount} | {isbn}</p>
+            </div>
+
+            <div class="description">
+                <p class="pub-blurb">
+                    At first, the poems in Tensegrity seem like small machines,
+                    disassembled and leaking grease into an overgrown lawn. It
+                    becomes clear after the first few pages though that these
+                    machines on the lawn connect, and that the result is a
+                    living thing "soggy with the laws inside [it]." Tensegrity
+                    is a book about being smeared across different layers of
+                    description and discretization. We are both human and
+                    humanity. We both are and are not our selves. And though we
+                    are not who we used to be, the poems remind us that we are
+                    made from them.
+                </p>
+
+                <hr />
+
+                <p class="blurb">
+                    "The very title, Tensegrity, warns us we're entering a work
+                    that's fundamentally strange and new. I've spent a good
+                    amount of time simply sitting with this work, allowing
+                    images of labyrinths and Dyson spheres to shuffle themselves
+                    around, moving poem by poem into being. The poems here are
+                    not merely puzzles or machines though, they're alive, right
+                    there, bleeding on the page. This is a masterwork."
+                    <br />-Liam Marshall
+                </p>
+            </div>
+        </div>
+
+        <Footer />
+    </body>
+</html>
+
+<style>
+    .product-content {
+        display: grid;
+        grid-template-columns: 1fr repeat(4, 100px) 1fr;
+        gap: 5px;
+        grid-auto-rows: minmax(50px, auto);
+    }
+
+    .cover-image {
+        grid-column: 2 / 6;
+        grid-row: 1;
+        outline: 2px solid;
+    }
+
+    .purchase-info {
+        grid-column: 2 / 4;
+        grid-row: 2;
+    }
+
+    .purchase-button {
+        grid-column: 4 / 6;
+        grid-row: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .button {
+        height: 50px;
+        width: 150px;
+    }
+
+    .book-info {
+        grid-column: 2 / 6;
+        grid-row: 3;
+        font-size: small;
+    }
+
+    .description {
+        grid-column: 2 / 6;
+        grid-row: 4;
+    }
+
+    .button-6 {
+        align-items: center;
+        background-color: #ffffff;
+        background-color: black;
+        border: 2px solid rgba(0, 0, 0, 0.3);
+        border-radius: 0.25rem;
+        box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+        box-sizing: border-box;
+        color: rgba(0, 0, 0, 0.85);
+        color: #f0f0f1;
+        cursor: pointer;
+        display: inline-flex;
+        font-family:
+            system-ui,
+            -apple-system,
+            system-ui,
+            "Helvetica Neue",
+            Helvetica,
+            Arial,
+            sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        justify-content: center;
+        line-height: 1.25;
+        margin: 0;
+        min-height: 3rem;
+        padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
+        position: relative;
+        text-decoration: none;
+        transition: all 250ms;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        vertical-align: baseline;
+        width: auto;
+    }
+
+    .button-6:hover,
+    .button-6:focus {
+        border-color: rgba(0, 0, 0, 0.4);
+        box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+        color: rgba(0, 0, 0, 0.65);
+        color: #f0f0f1;
+    }
+
+    .button-6:hover {
+        transform: translateY(-1px);
+    }
+
+    .button-6:active {
+        background-color: #f0f0f1;
+        border-color: rgba(0, 0, 0, 0.15);
+        box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+        color: rgba(0, 0, 0, 0.65);
+        transform: translateY(0);
+    }
+</style>

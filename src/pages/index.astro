@@ -71,6 +71,16 @@ const title = Astro.props;
         width: 400px;
         padding: 10px;
         margin-bottom: 20px;
+        box-shadow: 10px 10px black;
+    }
+
+    .sample-card:hover {
+        cursor: pointer;
+    }
+
+    .sample-card:active {
+        transform: translateY(5px);
+        box-shadow: 0px 0px black;
     }
 
     .sample-text {
