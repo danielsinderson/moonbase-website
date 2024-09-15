@@ -14,10 +14,22 @@
     &nbsp;
     <a href="/browse">Browse</a>
     &nbsp;
-    <a href="/submit">Submit</a>
-    &nbsp;
-    <a href="/contact">Contact</a>
+    <a href="/contact">Connect</a>
     &nbsp;
     <a href="/resources">Resources</a>
+    &nbsp;
+    <a class="shopping-cart" href="/"><img src="/shopping-cart.png" /></a>
 </div>
 <hr style="width: 100%;" />
+
+<style>
+    .shopping-cart {
+    }
+    .shopping-cart:hover,
+    .shopping-cart:focus {
+        content: url("/shopping-cart-red.png");
+    }
+    .shopping-cart:active {
+        content: url("/shopping-cart-gray.png");
+    }
+</style>

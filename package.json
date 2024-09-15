@@ -10,6 +10,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@stripe/stripe-js": "^4.3.0",
     "astro": "^4.14.2"
   }
 }
