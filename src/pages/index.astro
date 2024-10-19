@@ -31,13 +31,24 @@ const title = Astro.props;
                 width="300"
             />
         </div>
+        
         <hr />
+
+        <div class="page-content" id="about-the-press">
+            <p>
+                Moon Base Books is an independent publisher based in Ashland, OR. We began life in late 2023 and have published three full-length collections of poetry with two more on the way.
+            </p>
+            <p>
+                Our mission is to publish work with heart, craft, and ambition. Go big. Try hard. And when you can hear the asymptote at perfection beckon, give up and let your work become something real.
+            </p>
+            <p>
+                We have big plans for the coming years, so <a id=inline-link href="/contact#contact-form"> stay tuned!</a>
+            </p>
+        </div>
+
+        <hr />
+
         <div class="page-content">
-            <div>
-                <p>
-                    
-                </p>
-            </div>
             <script>
                 import "../scripts/generateSampleText.js";
             </script>
@@ -104,6 +115,7 @@ const title = Astro.props;
     .sample-card {
         outline: 2px solid;
         width: 400px;
+        margin-top: 10px;
         padding: 10px;
         margin-bottom: 20px;
         box-shadow: 10px 10px black;

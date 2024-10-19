@@ -42,6 +42,17 @@ a:active {
     color: #999;
 }
 
+#inline-link {
+    font-family: serif;
+    text-decoration: underline; 
+    color: black;
+}
+
+#inline-link:hover {
+    text-decoration: none;
+    color: #555;
+}
+
 em {
     font-weight: bold;
     font-style: normal;

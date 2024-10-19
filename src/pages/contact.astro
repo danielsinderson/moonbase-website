@@ -2,48 +2,67 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="About Us">
+<Layout title="About Moon Base Books">
     <p>
         Moon Base Books is an independent publisher started by Daniel Sinderson
-        in late 2023. We are based in Ashland, Oregon and we are looking for
-        work with heart, craft, and ambition. If it pulses with life, we want to
-        publish it.
+        in late 2023.
     </p>
 
     <p>
-        <em>Daniel Sinderson</em> is a poet, researcher, and game designer living
-        and working in Ashland, Oregon. He has degrees in Anthropology, Electronics,
+        <a id="inline-link" href="https://www.danielsinderson.com">Daniel Sinderson</a> is a poet and researcher
+        working in Ashland, Oregon. He has degrees in Anthropology, Electronics,
         and Mathematics, and he can stop any time he wants to. He's the man behind
-        the curtain at Moon Base Books, so if something here breaks you know exactly
+        the curtain at Moon Base Books, so if something here sucks or breaks you know exactly
         who to blame.
     </p>
 
     <h1>Submissions</h1>
     <hr />
     <p>
-        Moon Base Books accepts submissions during the first two weeks of every
-        month for our online journal Wavelet and during the month of January for
-        chapbook- or book-length works [submissions upcoming in 2025!].
+        [submissions upcoming in 2025!].
     </p>
     <p>
-        To submit send us an email. Put "Wavelet" or "Book" in the title and add
+        Moon Base Books will accept submissions twice every year for our 
+        digital literary magazine Wavelet.
+    </p>
+    <p>
+        Wavelet is planned to be a fully digital and downloadable magazine
+        that you can open any time you please on your browser. Being digital
+        has three very important advantages over a print magazine. It's cheaper.
+        It doesn't take space on your shelf, on your floor, or in your garbage.
+        And the set of representable mediums is much richer. We plan to exploit 
+        this often.
+    </p>
+    <p>
+        Submission are done by email. Put "Wavelet" in the title then add
         your work as an attachment. And please feel free to tell us about your
         submission and about who you are. Having more information about the work
         and its context is more important to us than vain attempts at
         objectivity.
     </p>
-    <p>
-        Coming in 2025 we will also have a discord server where we hope to host
-        writing groups, book clubs, and even seminars on technical topics
-        specifically geared towards a lay audience.
-    </p>
 
-    <h2>Wavelet</h2>
     <hr />
-    <p>Open submissions coming in 2025!</p>
-    <h2>Books</h2>
-    <hr />
-    <p>Open submissions coming in 2025!</p>
+
+    <div class="page-content" id="contact-form">
+        <h1>Contact Us</h1>
+        <form action="" method="get" class="contact-us">
+            <div class="contact-us">
+              <label for="name">Enter your name: </label>
+              <input type="text" name="name" id="name" required />
+            </div>
+            <div class="contact-us">
+              <label for="email">Enter your email: </label>
+              <input type="email" name="email" id="email" required />
+            </div>
+            <div class="contact-us">
+                <label for="message">Tell us about yourself: </label>
+                <input type="text" name="message" id="message" />
+              </div>
+            <div class="contact-us">
+              <input type="submit" value="Subscribe!" />
+            </div>
+          </form>
+    </div>
 </Layout>
 
 <style>
@@ -55,5 +74,10 @@ import Layout from "../layouts/Layout.astro";
         hr {
             width: 100%;
         }
+    }
+
+    .contact-us {
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 </style>
