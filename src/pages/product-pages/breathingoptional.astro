@@ -54,11 +54,8 @@ const isbn = "978-1-961343-00-9";
             </div>
 
             <div class="purchase-button">
-                <button class="button-6" role="button">Add to Cart</button>
-                <a
-                    href="https://www.lulu.com/shop/liam-marshall/breathing-optional/hardcover/product-rnyr5z.html?q=Breathing+Optional+Liam+Marshall&page=1&pageSize=4"
-                >
-                    <p>Purchase from Lulu.com</p>
+                <a href="https://www.lulu.com/shop/liam-marshall/breathing-optional/hardcover/product-rnyr5z.html?q=Breathing+Optional+Liam+Marshall&page=1&pageSize=4">
+                    <button class="button-6" role="button">Purchase</button>
                 </a>
             </div>
 
@@ -175,6 +172,13 @@ const isbn = "978-1-961343-00-9";
         touch-action: manipulation;
         vertical-align: baseline;
         width: auto;
+    }
+
+    .button-6:hover {
+        background-color: #BBB;
+        border-color: rgba(0, 0, 0, 0.15);
+        box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+        color: rgba(0, 0, 0, 0.65);
     }
 
     .button-6:active {

@@ -2,7 +2,7 @@
 
 ---
 
-<div class="nav-links">
+<header class="nav-links">
     <a href="/"
         ><img
             src="/logo_horizontal_cropped.webp"
@@ -17,7 +17,20 @@
     <a href="/contact">Connect</a>
     &nbsp;
     <a href="/resources">Resources</a>
-</div>
-<hr style="width: 100%;" />
+</header>
 
-<style></style>
+<style>
+    header {
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 99;
+        background-color: white;
+
+        padding-bottom: 3px;
+        padding-top: 3px;
+        margin-bottom: 10px;
+        border-bottom: 2px solid black;
+    }
+</style>

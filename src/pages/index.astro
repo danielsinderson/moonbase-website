@@ -1,6 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import ProductThumbnail from "../components/ProductThumbnail.astro";
 import "../styles/global.css";
 interface Props {
     title: string;
@@ -33,11 +34,9 @@ const title = Astro.props;
         <hr />
         <div class="page-content">
             <div>
-                <a class="title-page-links" href="/browse"><h2>Browse</h2></a>
-                <a class="title-page-links" href="/contact"><h2>Connect</h2></a>
-                <a class="title-page-links" href="/resources"
-                    ><h2>Resources</h2></a
-                >
+                <p>
+                    
+                </p>
             </div>
             <script>
                 import "../scripts/generateSampleText.js";
@@ -48,6 +47,41 @@ const title = Astro.props;
                 <p class="sample-author" id="sampleAuthor"></p>
             </a>
         </div>
+
+        <hr>
+        
+
+        <div class="page-content">
+            <h1>Latest Releases</h1>
+        <div class="product-grid">
+            <ProductThumbnail
+                storeURL="/product-pages/tensegrity"
+                coverImage="/TensegrityCover.webp"
+                coverAlt="Cover for Tensegrity, an overhead projector projecting a multicolored holograph of a cube on a red-orange background"
+                title="Tensegrity"
+                author="Daniel Sinderson"
+                price="$10"
+            />
+    
+            <ProductThumbnail
+                storeURL="/product-pages/wax"
+                coverImage="/WaxCover.webp"
+                coverAlt="Cover for Wax, an abstract image of rectangles of different sizes and textures on a white background"
+                title="Wax"
+                author="Liam Marshall"
+                price="$39"
+            />
+    
+            <ProductThumbnail
+                storeURL="/product-pages/breathingoptional"
+                coverImage="/BreathingOptionalCover.webp"
+                coverAlt="Cover for Breathing Optional, cardiogram signal on a black background"
+                title="Breathing Optional"
+                author="Liam Marshall"
+                price="$39"
+            />
+        </div>
+    </div>
         <Footer />
     </body>
 </html>
@@ -104,5 +138,13 @@ const title = Astro.props;
 
     hr {
         width: clamp(400px, 50%, 800px);
+    }
+
+    .product-grid {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: left;
+        
     }
 </style>
