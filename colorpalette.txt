@@ -1,0 +1,5 @@
+Electric Purple = #C200FB
+Razzmatazz = #EC0868
+Scarlet = #FC2F00
+Tangerine = #EC7D10
+Selective Yellow = #FFBC0A

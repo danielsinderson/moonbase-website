@@ -7,6 +7,9 @@
     font-display: swap;
 }
 
+html {
+    background-color: #FFFFFF;
+}
 
 h1 {
     font-family: 'Vagrund', sans-serif;
@@ -34,8 +37,12 @@ a:visited {
 
 a:hover {
     /*text-decoration: underline;*/
-    color: #929;
-    color: #555;
+    color: #999;
+    color: #C200FB;
+    color: #EC0868;
+    color: #FC2F00;
+    color: #EC7D10;
+    color: #FFBC0A;
 }
 
 a:active {
@@ -50,7 +57,12 @@ a:active {
 
 #inline-link:hover {
     text-decoration: none;
-    color: #555;
+    color: #999;
+    color: #C200FB;
+    color: #EC0868;
+    color: #FC2F00;
+    color: #EC7D10;
+    color: #FFBC0A;
 }
 
 em {
