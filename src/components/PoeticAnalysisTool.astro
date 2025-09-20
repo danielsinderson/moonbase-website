@@ -1,11 +1,11 @@
 ---
-import {RiTa} from "rita";
+import { analyze } from "../scripts/analyzePoems";
 ---
 
 <div>
   <h2>Poetic Analysis Tool</h2>
 
-  <textarea id="poemInput" rows="6" cols="40" placeholder="Paste your text here..."></textarea>
+  <textarea id="poemInput" rows="6" cols="40"></textarea>
 
   <div>
     <label for="analysisType">Choose analysis:</label>
@@ -16,45 +16,12 @@ import {RiTa} from "rita";
     </select>
   </div>
 
-  <button id="analyzeBtn">Analyze</button>
+    <button id="analyzeBtn">Analyze</button>
 
-  <pre id="output"></pre>
+    <pre id="output"></pre>
+  
 </div>
 
-<script client:load, is:inline>
-  import RiTa from "rita";
-
-  document.addEventListener("DOMContentLoaded", () => {
-    const btn = document.getElementById("analyzeBtn");
-    const input = document.getElementById("poemInput");
-    const select = document.getElementById("analysisType");
-    const output = document.getElementById("output");
-
-    btn.addEventListener("click", () => {
-      const text = input.value.trim();
-      let result = "";
-
-      switch (select.value) {
-        case "rhyme": {
-          const words = RiTa.tokenize(text);
-          const lastWord = words[words.length - 1] || "";
-          const rhymes = RiTa.rhymes(lastWord);
-          result = `Rhymes for "${lastWord}":\n` + rhymes.join(", ");
-          break;
-        }
-        case "syllables": {
-          result = `Syllable breakdown: ${RiTa.getSyllables(text)}`;
-          break;
-        }
-        case "pos": {
-          result = "Parts of speech: " + RiTa.pos(text).join(" ");
-          break;
-        }
-        default:
-          result = "Choose an option.";
-      }
-
-      output.textContent = result;
-    });
-  });
+<script>
+  import "../scripts/analyzePoems.js"
 </script>
